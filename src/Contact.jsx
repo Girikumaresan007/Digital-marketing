@@ -1,4 +1,34 @@
 function Contact() {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const subject = e.target.subject.value || "Contact Form Message";
+    const message = e.target.message.value;
+
+    const gmailURL =
+      "https://mail.google.com/mail/?view=cm&fs=1" +
+      "&to=risingsun.techs@gmail.com" +
+      `&su=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(
+        `Hi Team,
+
+You have received a new message from your website.
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+Thanks`
+      )}`;
+
+    window.open(gmailURL, "_blank");
+  };
+
   return (
     <section className="contact" id="contact">
       <h2>Contact Us</h2>
@@ -8,7 +38,7 @@ function Contact() {
 
       <div className="contact-wrapper">
 
-        {/* LEFT – CONTACT DETAILS */}
+        {/* LEFT */}
         <div className="contact-info">
           <div className="info-box">
             <h4>📞 Phone</h4>
@@ -23,24 +53,19 @@ function Contact() {
           <div className="info-box">
             <h4>📍 Location</h4>
             <p>
-              60,Ayyanar Kovil Street, <br />
-             Puvalur,Trichy - 621712
+              60, Ayyanar Kovil Street <br />
+              Puvalur, Trichy - 621712
             </p>
           </div>
-
-          {/* <div className="info-box">
-            <h4>⏰ Working Hours</h4>
-            <p>Mon – Fri : 9:00 AM – 6:00 PM</p>
-          </div> */}
         </div>
 
-        {/* RIGHT – FORM (UI only) */}
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Your Message"></textarea>
-          <button>Send Message</button>
+        {/* RIGHT – FORM */}
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input name="name" type="text" placeholder="Your Name" required />
+          <input name="email" type="email" placeholder="Your Email" required />
+          <input name="subject" type="text" placeholder="Subject" />
+          <textarea name="message" placeholder="Your Message" required />
+          <button type="submit">Send Message</button>
         </form>
 
       </div>

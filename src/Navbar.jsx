@@ -1,12 +1,15 @@
-import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import logo from "./Assets/Copilot_20251230_151301.png";
 
 function Navbar() {
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const goToSection = (id) => {
+    setMenuOpen(false); // close menu after click
+
     if (location.pathname !== "/") {
-      // go to landing page and scroll
       window.location.href = `/#${id}`;
     } else {
       const section = document.getElementById(id);
@@ -23,7 +26,18 @@ function Navbar() {
         <h2 className="logo-text">RISING SUN</h2>
       </div>
 
-      <nav>
+      {/* HAMBURGER */}
+      <div
+        className={`hamburger ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      {/* NAV LINKS */}
+      <nav className={menuOpen ? "nav-open" : ""}>
         <a onClick={() => goToSection("home")}>Home</a>
         <a onClick={() => goToSection("about")}>About</a>
         <a onClick={() => goToSection("services")}>Services</a>
