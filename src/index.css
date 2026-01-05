@@ -186,6 +186,10 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
+@media (max-width: 768px) {
+  .about-tag { margin-bottom: 0;
+  }
+}
 /* SERVICES */
 /* SERVICES SECTION */
 .services {
@@ -380,6 +384,56 @@ body {
   background: #1d4ed8;
 }
 
+/* ================================
+   MOBILE (max-width: 768px)
+================================ */
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .contact-sub {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  /* STACK COLUMN */
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  /* INFO BOX */
+  .info-box {
+    padding: 16px;
+  }
+
+  .info-box h4 {
+    font-size: 16px;
+  }
+
+  .info-box p {
+    font-size: 14px;
+  }
+
+  /* FORM */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
 
 /* FOOTER */
 .footer {
@@ -433,36 +487,47 @@ body {
   /* NAVBAR */
   .navbar {
     flex-direction: column;
+    align-items: center;
+    padding: 12px 20px;
     height: auto;
-    padding: 15px 20px;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 22px;
   }
 
   .navbar nav {
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .navbar a {
-    margin: 0 10px;
-    font-size: 30px;
+    font-size: 16px;   /* 🔥 FIXED */
+    margin: 6px 10px;
   }
 
   /* HERO */
   .hero {
     height: auto;
-    padding: 120px 20px 60px;
+    padding: 140px 20px 60px;
+    text-align: center;
   }
 
-  .hero-content {
-    margin-top: 0;
-    max-width: 100%;
+  .one,
+  .two {
+    font-size: 32px;
+    width: 100%;
   }
 
-  .hero-content h1 {
-    font-size: 28px;
-  }
-
-  .hero-content p {
-    font-size: 15px;
+  .hero-sub {
+    width: 100%;
+    letter-spacing: 1px;
   }
 
   /* ABOUT */
@@ -475,66 +540,17 @@ body {
     text-align: center;
   }
 
-  .about-tag {
-    font-size: 26px;
-    margin-bottom: 1px;
-  }
-
   .about-text h2 {
     font-size: 28px;
-    margin-bottom: -8px;
   }
 
   .about-stats {
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
-  }
-
-  .about-image img {
-    margin-top: 30px;
-  }
-
-  /* SERVICES */
-  .services {
-    padding: 70px 25px;
-  }
-
-  .section-title {
-    font-size: 28px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* INSTAGRAM */
-  .instagram {
-    padding: 60px 25px;
-  }
-
-  .insta-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* CONTACT */
-  .contact {
-    padding: 70px 25px;
-  }
-
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .contact h2 {
-    font-size: 28px;
-  }
-
-  /* FOOTER */
-  .footer {
-    font-size: 14px;
+    flex-wrap: wrap;
   }
 }
+
 
 /* ================================
    SMALL MOBILE (max-width: 480px)

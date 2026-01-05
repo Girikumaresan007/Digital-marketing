@@ -28,20 +28,27 @@ function About() {
         </p>
 
 
-          <div className="about-stats">
-            <div>
-              <h3>100+</h3>
-              <span>Clients Served</span>
-            </div>
-            <div>
-              <h3>5+</h3>
-              <span>Years Experience</span>
-            </div>
-            <div>
-              <h3>250+</h3>
-              <span>Projects Delivered</span>
-            </div>
-          </div>
+        <div className="about-section">
+  <div className="about-content">
+    {/* heading + paragraph here */}
+
+    <div className="about-stats">
+      <div>
+        <h3>100+</h3>
+        <span>Clients Served</span>
+      </div>
+      <div>
+        <h3>5+</h3>
+        <span>Years Experience</span>
+      </div>
+      <div>
+        <h3>250+</h3>
+        <span>Projects Delivered</span>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
 
         {/* RIGHT – IMAGE */}

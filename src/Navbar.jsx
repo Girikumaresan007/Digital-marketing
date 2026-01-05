@@ -20,7 +20,7 @@ function Navbar() {
     <header className="navbar">
       <div className="logo-box">
         <img src={logo} alt="Upturn Logo" className="logo-img" />
-        <h2 className="logo-text">RISING</h2>
+        <h2 className="logo-text">RISING SUN</h2>
       </div>
 
       <nav>

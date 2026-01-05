@@ -17,7 +17,7 @@ function Contact() {
 
           <div className="info-box">
             <h4>✉️ Email</h4>
-            <p>info@upturnmarketing.com</p>
+            <p>risingsun.techs@gmail.com</p>
           </div>
 
           <div className="info-box">
