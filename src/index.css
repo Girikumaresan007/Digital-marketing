@@ -547,7 +547,7 @@ body {
 
   .about-stats {
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
   }
 }
@@ -754,4 +754,32 @@ body {
     padding: 13px 20px;
   }
 }
+/* ================================
+   ABOUT STATS – MOBILE ONE ROW FIX
+================================ */
+@media (max-width: 768px) {
+  .about-stats {
+    display: flex;
+    flex-wrap: nowrap;          /* 🔥 important */
+    justify-content: space-between;
+    gap: 0;                     /* remove big gap */
+    width: 100%;
+  }
+
+  .about-stats > div {
+    flex: 1;                    /* all equal width */
+    text-align: center;
+  }
+
+  .about-stats h3 {
+    font-size: 26px;            /* mobile friendly */
+  }
+
+  .about-stats span {
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+  }
+}
+
 
