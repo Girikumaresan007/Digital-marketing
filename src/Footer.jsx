@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="footer">
-      <p>© 2025 Digital Marketing</p>
+      <p>© 2026 RisingSun . All rights reserved.</p>
     </footer>
   );
 }

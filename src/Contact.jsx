@@ -1,3 +1,4 @@
+import { MessageCircle, Instagram, Facebook } from "lucide-react";
 function Contact() {
 
   const handleSubmit = (e) => {
@@ -57,6 +58,38 @@ Thanks`
               Puvalur, Trichy - 621712
             </p>
           </div>
+            <div className="social-icons">
+  <a
+    href="https://wa.me/919342622161"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-icon whatsapp"
+    aria-label="WhatsApp"
+  >
+    <MessageCircle size={22} />
+  </a>
+
+  <a
+    href="https://www.facebook.com/profile.php?id=61586530404253"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-icon facebook"
+    aria-label="Facebook"
+  >
+    <Facebook size={22} />
+  </a>
+
+    <a
+    href="https://www.instagram.com/risingsun.techs/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-icon instagram"
+    aria-label="Instagram"
+  >
+    <Instagram size={22} />
+  </a>
+</div>
+
         </div>
 
         {/* RIGHT – FORM */}
