@@ -145,7 +145,7 @@ body {
   font-size: 40px;
   line-height: 1.2;
   margin-bottom: 20px;
-  color: #111827;
+  color: #263138;
   font-family: 'Times New Roman', Times, serif;
   text-align: left;           /* or center if you want */
   word-spacing: normal;       /* 🔥 KEY FIX */
@@ -207,7 +207,7 @@ body {
 
 .section-sub {
   font-size: 18px;
-  color: #6b7280;
+  color:#263138;
   margin-bottom: 60px;
   font-family: 'Times New Roman', Times, serif;
 }

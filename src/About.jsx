@@ -4,7 +4,7 @@ function About() {
 
       {/* CENTER HEADING */}
       <div className="about-heading">
-        <span className="about-tag">ABOUT US</span>
+        <span className="about-tag">About Us</span>
 
       </div>
 
